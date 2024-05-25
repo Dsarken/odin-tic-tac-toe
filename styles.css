@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #37505c;
+  font-family: "Finger Paint", sans-serif;
+}
+
+:root {
+  --orange: #f2c14e;
+  --winning-row: #2d414b;
+}
+
+#volume-icon {
+  cursor: pointer;
+}
+
+h1 {
+  color: white;
+  font-size: 60px;
+  font-weight: bolder;
+  font-style: oblique;
+}
+
+.title-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.header-icons {
+  transition: 0.3s transform ease;
+  cursor: pointer;
+}
+
+.header-icons:hover {
+  transform: scale(1.1);
+}
+
+div.game-board {
+  background-color: #37505c;
+  align-self: center;
+  justify-content: center;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  gap: 0.75rem;
+  margin-top: 70px;
+  padding: 0.75rem; /* Add this line */
+  box-sizing: border-box; /* Add this line */
+}
+
+div.grid-cell-symbol {
+  display: flex;
+  justify-content: center;
+  color: var(--orange);
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-right: 0.75rem solid black;
+  border-bottom: 0.75rem solid black;
+}
+
+.grid-cell-symbol {
+  font-size: 70px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid-cell-symbol:nth-child(3n) {
+  border-right: none;
+}
+
+.grid-cell-symbol:nth-child(6) ~ .grid-cell-symbol {
+  border-bottom: none;
+}
+
+.grid-cell-top-left {
+  border-left: transparent;
+  border-top: transparent;
+  border-right: transparent;
+  border-bottom: transparent;
+}
+
+.grid-cell-top-center {
+  border-top: transparent;
+}
+
+.grid-cell-top-right {
+  border-top: transparent;
+  border-right: transparent;
+}
+
+.grid-cell-center-left {
+  border: transparent;
+}
+
+.grid-cell-center {
+  border-top: none;
+  border-bottom: none;
+}
+
+.grid-cell-center-right {
+  border: transparent;
+}
+
+.grid-cell-bottom-left {
+  border: transparent;
+}
+
+.grid-cell-bottom-center {
+  border-top: transparent;
+  border-bottom: transparent;
+}
+
+.grid-cell-bottom-right {
+  border: transparent;
+}
+
+.button-position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.restartButton {
+  margin-top: 30px;
+  font-family: "Finger Paint", sans-serif;
+  border: 5px solid black;
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+  font-size: larger;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.restartButton:hover {
+  transform: scale(1.1);
+}
+
+.status-text-position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
